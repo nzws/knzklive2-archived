@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import { darken, lighten, rgba } from 'polished';
-import { GlobalTheme } from '../../styles/theme';
+import { GlobalTheme } from '../theme';
 
 export type Props = {
   color: keyof typeof GlobalTheme.colors;

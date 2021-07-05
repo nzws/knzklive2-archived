@@ -1,5 +1,5 @@
 import 'styled-components';
-import { GlobalTheme } from '../styles/theme';
+import { GlobalTheme } from '../ui/theme';
 
 type Theme = typeof GlobalTheme;
 

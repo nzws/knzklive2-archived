@@ -1,6 +1,6 @@
 import { FC, Fragment } from 'react';
-import { ComponentsContainer } from './common';
-import { Badge } from '../badge';
+import { ComponentsContainer, ComponentsTitle } from './common';
+import { Badge } from '../../ui/badge';
 
 export const Badges: FC = () => (
   <Fragment>
@@ -14,9 +14,15 @@ export const Badges: FC = () => (
     </ComponentsContainer>
 
     <ComponentsContainer>
+      <ComponentsTitle>Additional props</ComponentsTitle>
+
       <Badge color="primary" upper>
         Uppercase
       </Badge>
+    </ComponentsContainer>
+
+    <ComponentsContainer>
+      <ComponentsTitle>Usage example</ComponentsTitle>
 
       <Badge color="transparent" upper>
         Stand by

@@ -1,12 +1,12 @@
 module.exports = {
-  presets: ["next/babel"],
+  presets: ['next/babel'],
   plugins: [
     [
-      "styled-components",
+      'styled-components',
       {
         ssr: true,
-        minify: true,
-      },
-    ],
-  ],
+        minify: true
+      }
+    ]
+  ]
 };

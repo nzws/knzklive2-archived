@@ -1,7 +1,7 @@
 import { FC, Fragment, useCallback, useEffect, useState } from 'react';
-import { CheckCircle, PlayCircle } from 'react-feather';
-import { ComponentsContainer } from './common';
-import { Button, ButtonIcon } from '../button';
+import { Check, CheckCircle, PlayCircle } from 'react-feather';
+import { ComponentsContainer, ComponentsTitle } from './common';
+import { Button, ButtonIcon } from '../../ui/button';
 
 export const Buttons: FC = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -28,45 +28,51 @@ export const Buttons: FC = () => {
       </ComponentsContainer>
 
       <ComponentsContainer>
+        <ComponentsTitle>Skeleton</ComponentsTitle>
+
         <Button color="primary" skeleton>
-          Skeleton Primary
+          Primary
         </Button>
         <Button color="secondary" skeleton>
-          Skeleton Secondary
+          Secondary
         </Button>
         <Button color="success" skeleton>
-          Skeleton Success
+          Success
         </Button>
         <Button color="warning" skeleton>
-          Skeleton Warning
+          Warning
         </Button>
         <Button color="danger" skeleton>
-          Skeleton Danger
+          Danger
         </Button>
         <Button color="white" skeleton>
-          Skeleton White
+          White
         </Button>
       </ComponentsContainer>
 
       <ComponentsContainer>
+        <ComponentsTitle>Disabled</ComponentsTitle>
+
         <Button color="primary" disabled>
-          Disabled Primary
+          Primary
         </Button>
         <Button color="secondary" disabled>
-          Disabled Secondary
+          Secondary
         </Button>
         <Button color="success" disabled>
-          Disabled Success
+          Success
         </Button>
         <Button color="warning" disabled>
-          Disabled Warning
+          Warning
         </Button>
         <Button color="danger" disabled>
-          Disabled Danger
+          Danger
         </Button>
       </ComponentsContainer>
 
       <ComponentsContainer>
+        <ComponentsTitle>Size</ComponentsTitle>
+
         <div>
           <Button color="primary" size="small">
             Small
@@ -85,18 +91,45 @@ export const Buttons: FC = () => {
       </ComponentsContainer>
 
       <ComponentsContainer>
-        <ButtonIcon color="primary" icon={CheckCircle}>
-          Button with Icon
-        </ButtonIcon>
+        <ComponentsTitle>Icon / Loading</ComponentsTitle>
 
-        <ButtonIcon
-          color="primary"
-          icon={PlayCircle}
-          isLoading={isLoading}
-          onClick={handleClick}
-        >
-          Click to Loading
-        </ButtonIcon>
+        <div>
+          <ButtonIcon color="primary" icon={CheckCircle}>
+            Button with Icon
+          </ButtonIcon>
+        </div>
+
+        <div>
+          <ButtonIcon
+            color="primary"
+            icon={PlayCircle}
+            isLoading={isLoading}
+            onClick={handleClick}
+          >
+            Click to Loading
+          </ButtonIcon>
+        </div>
+      </ComponentsContainer>
+
+      <ComponentsContainer>
+        <ComponentsTitle>Usage example</ComponentsTitle>
+
+        <div>
+          <Button color="secondary" skeleton>
+            Cancel
+          </Button>
+        </div>
+
+        <div>
+          <ButtonIcon
+            color="primary"
+            icon={Check}
+            isLoading={isLoading}
+            onClick={handleClick}
+          >
+            Submit
+          </ButtonIcon>
+        </div>
       </ComponentsContainer>
     </Fragment>
   );

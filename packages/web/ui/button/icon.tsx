@@ -3,7 +3,7 @@ import { Icon } from 'react-feather';
 import styled from 'styled-components';
 import MDSpinner from 'react-md-spinner';
 import { Button, Props } from './base';
-import { GlobalTheme } from '../../styles/theme';
+import { GlobalTheme } from '../theme';
 
 const IconSize = {
   small: 14,

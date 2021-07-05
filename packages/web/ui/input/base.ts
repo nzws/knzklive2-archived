@@ -1,6 +1,7 @@
+import { lighten } from 'polished';
 import styled, { css } from 'styled-components';
 
-type Props = {
+export type Props = {
   error?: boolean;
 };
 
@@ -9,16 +10,32 @@ const Error = css`
   border-color: ${({ theme: { colors } }) => colors.danger};
 `;
 
-export const Input = styled.input<Props>`
+export const InputStyle = css<Props>`
   display: block;
+  width: 100%;
   border: none;
   background: ${({ theme: { colors } }) => colors.transparent};
+  color: ${({ theme: { colors } }) => colors.text};
   border-bottom: solid 1px ${({ theme: { colors } }) => colors.border};
   padding: 10px 8px;
+  transition: all ${({ theme: { animations } }) => animations.normal};
 
-  :active {
+  :hover {
+    border-color: ${({ theme: { colors } }) => lighten(0.1, colors.border)};
+  }
+
+  :active,
+  :focus {
     border-color: ${({ theme: { colors } }) => colors.primary};
   }
 
   ${({ error }) => error && Error};
+`;
+
+export const Input = styled.input<Props>`
+  ${InputStyle};
+`;
+
+export const TextArea = styled.textarea<Props>`
+  ${InputStyle};
 `;

@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import 'bootstrap/dist/css/bootstrap-reboot.css';
 
 export const GlobalStyle = createGlobalStyle`
   body {
@@ -25,7 +26,6 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   *, *:after, *:before {
-    box-sizing: border-box;
     outline: 0;
   }
 

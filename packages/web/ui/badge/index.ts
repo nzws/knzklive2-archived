@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { GlobalTheme } from '../../styles/theme';
+import { GlobalTheme } from '../theme';
 
 type Props = {
   color: keyof typeof GlobalTheme.colors;

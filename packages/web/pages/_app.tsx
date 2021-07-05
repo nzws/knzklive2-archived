@@ -2,10 +2,8 @@ import { AppProps } from 'next/app';
 import { ThemeProvider } from 'styled-components';
 import NextNprogress from 'nextjs-progressbar';
 import Head from 'next/head';
-import { GlobalTheme } from '../styles/theme';
-import { GlobalStyle } from '../styles/global';
-
-import 'ress/dist/ress.min.css';
+import { GlobalTheme } from '../ui/theme';
+import { GlobalStyle } from '../ui/global';
 
 const App: React.FC<AppProps> = ({ Component, pageProps }) => {
   /*
